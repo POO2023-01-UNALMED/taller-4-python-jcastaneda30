@@ -8,11 +8,11 @@ class Grupo:
         self._asignaturas = asignaturas
         if estudiantes==None:
             estudiantes=[]
+        if self._asignaturas==None:
+            self._asignaturas=[]
         self.listadoAlumnos = estudiantes
 
     def listadoAsignaturas(self, **kwargs):
-        if self._asignaturas==None:
-            self._asignaturas=[]
         for x in kwargs.values():
             self._asignaturas.append(Asignatura(x))
 
